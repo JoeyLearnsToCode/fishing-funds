@@ -52,7 +52,7 @@ const ManageHistoryFundList: React.FC<ManageHistoryFundListProps> = ({ manageHis
   }, [manageHistoryFunds]);
 
   // 间隔时间检查最新净值
-  useFixTimeToDo(() => autoFreshSetting && runGetFixFunds(manageHistoryFundList), freshDelaySetting * 1000 * 60);
+  useFixTimeToDo(() => autoFreshSetting && runGetFixFunds(manageHistoryFundList), freshDelaySetting * 1000);
 
   return (
     <div className={styles.content}>

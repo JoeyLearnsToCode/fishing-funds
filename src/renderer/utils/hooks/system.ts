@@ -352,7 +352,7 @@ export function useBootStrap() {
         () => Adapters.ChokeAllAdapter([runLoadZindexs, runLoadQuotations]),
       ]);
     }
-  }, freshDelaySetting * 1000 * 60);
+  }, freshDelaySetting * 1000);
 
   // 间隔时间检查最新净值
   useFixTimeToDo(() => {
@@ -366,7 +366,7 @@ export function useBootStrap() {
     if (autoFreshSetting) {
       Adapters.ChokeAllAdapter([runLoadCoins]);
     }
-  }, freshDelaySetting * 1000 * 60);
+  }, freshDelaySetting * 1000);
 
   // 第一次刷新所有数据
   useEffect(() => {

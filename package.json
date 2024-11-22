@@ -10,8 +10,8 @@
     "build:icon": "electron-icon-builder --input=./build/icon.png --output=./icon-build",
     "package": "npm run build && electron-builder build -p never",
     "package-mac": "npm run build && electron-builder build -m -p never",
-    "package-all": "npm run build && electron-builder build -mwl -p never",
-    "release-all": "npm run build && electron-builder build -mwl -p always",
+    "package-all": "npm run build && electron-builder build -w -p never",
+    "release-all": "npm run build && electron-builder build -w -p always",
     "beta-mac": "npm run build && electron-builder build -m -p always"
   },
   "build": {

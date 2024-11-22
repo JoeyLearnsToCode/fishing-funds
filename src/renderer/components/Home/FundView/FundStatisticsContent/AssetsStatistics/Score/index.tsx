@@ -27,7 +27,7 @@ const Score: React.FC<ScoreProps> = ({ gssyl = 0 }) => {
   const [HS, setHS] = useState('');
 
   const { data: result, run: runGetZindexFromEastmoney } = useRequest(() => Services.Zindex.FromEastmoney(indexCode), {
-    pollingInterval: autoFreshSetting ? 1000 * 60 * freshDelaySetting : undefined,
+    pollingInterval: autoFreshSetting ? 1000 * freshDelaySetting : undefined,
   });
 
   useRenderEcharts(
